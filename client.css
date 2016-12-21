@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+body {
+  font-family: helvetica;
+  color: #444;
+}
+
+.content {
+  display: none;
+  flex-flow: column;
+  height: 100%;
+}
+
+.content .list {
+  flex: 1 1 auto;
+  max-height: calc(100% - 45px);
+  overflow: auto;
+}
+
+.box .form {
+  flex: 0 1 45px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+ul li:hover,
+ul li:active {
+  background-color: #eee;
+}
+
+ul li a {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.form {
+  min-height: 25px;
+  background: #ccc;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.form input {
+  width: 65%;
+  font-size: 1em;
+}
+
+.form a {
+  display: inline-block;
+  text-align: center;
+  padding: 4px;
+  width: 30%;
+  float: right;
+  background: green;
+}
+
+a {
+  cursor: pointer;
+}
+
+.error,
+.detail {
+  display: none;
+}
+
+.detail a {
+  display: inline-block;
+  text-align: center;
+  padding: 4px;
+  width: 30%;
+  float: left;
+}
+
+.detail div {
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "xmas-bell",
+  "version": "1.0.0",
+  "description": "socket.io based web-app for remotely controlled audio playback",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-kaspar/xmas-bell.git"
+  },
+  "keywords": [
+    "node.js",
+    "socket.io",
+    "html5",
+    "audio"
+  ],
+  "author": "Roman Kaspar <roman@salsitasoft.com> (https://salsitasoft.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roman-kaspar/xmas-bell/issues"
+  },
+  "homepage": "https://github.com/roman-kaspar/xmas-bell#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2"
+  }
+}
