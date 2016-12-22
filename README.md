@@ -36,6 +36,8 @@ You can also replace `bell.mp3` file in the `xmas-bell` directory with the recor
 
 To try the service before you clone and run your own instance (e.g. to see that your browsers / devices can be used), I started an instance on Heroku at [xmas-bell.herokuapp.com](https://xmas-bell.herokuapp.com/). It is a playground only, do not use it for real, as anyone can connect there at anytime and ring any bell from any session.
 
+Since it is a free Heroku instance, it can take some time for the instance to wake up. Even worse: there is no guarantee it will be up when you need it. So in case you consider using it at home, please spin up your local instance!
+
 ## Future development
 
 For next season (Xmas 2017) I may add password protection for sessions, so then you'll be able to protect your own sessions and no one could access them (so no one can ring your bells, not without the right password).
