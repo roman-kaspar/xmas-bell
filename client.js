@@ -168,7 +168,20 @@ $(() => {
 
   const enableAddButton = (enabled) => {
     state.btnClick = enabled
-    views.content.btn.css('background-color', enabled ? 'green' : 'gray')
+    if (state.btnClick) {
+      views.content.btn.css({
+        backgroundColor: '#4caf50',
+        opacity: 1,
+        color: '#fff'
+      })
+    } else {
+      views.content.btn.css({
+        'background-color': '#fff',
+        opacity: 0.25,
+        color: '#444'
+      })
+    }
+    
   }
 
   const onItemClick = (data) => {
@@ -204,12 +217,13 @@ $(() => {
 
   const updateAudioBtn = (playing) => {
     const icon = views.detail.audioIcon
+    const btn = views.detail.audioBtn
     if (playing) {
-      if ( icon.hasClass('fa-play')) { icon.removeClass('fa-play') }
-      if (!icon.hasClass('fa-stop')) { icon.addClass('fa-stop')    }
+      if ( icon.hasClass('fa-play')) { icon.removeClass('fa-play'); btn.removeClass('play') }
+      if (!icon.hasClass('fa-stop')) { icon.addClass('fa-stop'); btn.addClass('stop') }
     } else {
-      if ( icon.hasClass('fa-stop')) { icon.removeClass('fa-stop') }
-      if (!icon.hasClass('fa-play')) { icon.addClass('fa-play')    }
+      if ( icon.hasClass('fa-stop')) { icon.removeClass('fa-stop'); btn.removeClass('stop') }
+      if (!icon.hasClass('fa-play')) { icon.addClass('fa-play'); btn.addClass('play') }
     }
   }
 

@@ -46,3 +46,6 @@ For next season (Xmas 2017) I may add password protection for sessions, so then 
 ## Merry Xmas
 
 for you and your children!
+
+## Credits
+Christmas tree image from http://4vector.com/free-vector/christmas-tree-05-vector-25039

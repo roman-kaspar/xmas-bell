@@ -1,6 +1,7 @@
 <!doctype html5>
 <head>
   <title>Xmas Bell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script src="jquery.min.js"></script>
   <script src="socket.io/socket.io.js"></script>
@@ -38,19 +39,19 @@
 
 <div class="detail" id="detail">
   <h2>Session <span id="session-name"></span></h2>
-  <div>
+  <div class="volume-control">
     <div><i class="fa fa-volume-off" aria-hidden="true"></i></div>
     <input id="volume" type="range" min="0" max="99" step="1"/>
     <div><i class="fa fa-volume-up" aria-hidden="true"></i></div>
   </div>
-  <div>
-    <a id="audio-ctl" style="background: lightblue;">
+  <div class="bell-control">
+    <a id="audio-ctl" class="play">
       <i class="fa fa-play" id="audio-icon" aria-hidden="true"></i>
     </a>
-    <a id="session-terminate" style="background: #ff4500;">
+    <a id="session-terminate">
       <i class="fa fa-times" aria-hidden="true"></i>
     </a>
-    <a id="home" style="background: lightgreen;">
+    <a id="home">
       <i class="fa fa-home" aria-hidden="true"></i>
     </a>
   </div>
