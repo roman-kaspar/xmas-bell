@@ -48,8 +48,8 @@ const onSocketDisconnect = (id) => {
 }
 
 const onMessage = (socket, data) => {
-  log(`[ws] data received from client (id:${socket.id}):`)
-  nlog(JSON.stringify(data, null, 2))
+  // log(`[ws] data received from client (id:${socket.id}):`)
+  // nlog(JSON.stringify(data, null, 2))
   switch (data.type) {
     case 'init':
       const info = sessions.map(session => ({

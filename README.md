@@ -13,7 +13,7 @@ You install the server part of the application on a computer. You'll need a comp
 
 Then you will need another device with browser, that will be used as a remote control. It will typically be a smart phone (tested with mobile Safari and mobile Google Chrome browsers), but it can be another computer as well. You navigate to the same server from the browser and select already existing session there.
 
-You'll see slider to control audio volume, and play button to start the bell audio (and home button to go back to the session list). When it is the right time, press the play button and the other browser will play the bell audio for you.
+You'll see slider to control audio volume (doesn't when audio is hosted on mobile device), and play button to start the bell audio (and home button to go back to the session list). When it is the right time, press the play button and the other browser will play the bell audio for you.
 
 ## Installation
 
@@ -23,7 +23,7 @@ The server part is written for `node.js`, so you'll need to install `node.js`. T
 $ git clone git@github.com:roman-kaspar/xmas-bell.git
 $ cd xmas-bell
 $ yarn
-$ yarn start
+$ npm start
 ```
 
 You can specify env. variable `PORT` to say what port the server should run on, the default is 3000.

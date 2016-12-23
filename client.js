@@ -48,7 +48,7 @@ $(() => {
   }
 
   const showDetail = (data) => {
-    views.detail.name.text(`"${data.name}"`)
+    views.detail.name.text(data.name)
     if (data.id === state.socket.id) {
       views.detail.termBtn.show()
     } else {
@@ -77,7 +77,7 @@ $(() => {
   })
 
   socket.on('data', (data) => {
-    console.log(`data received:\n${JSON.stringify(data, null, 2)}`)
+    // console.log(`data received:\n${JSON.stringify(data, null, 2)}`)
     switch (data.type) {
       // initial load or after connection recovery
       case 'init':
@@ -181,7 +181,6 @@ $(() => {
         color: '#444'
       })
     }
-    
   }
 
   const onItemClick = (data) => {
@@ -194,9 +193,19 @@ $(() => {
       const node = document.createElement('li')
       const link = document.createElement('a')
       link.onclick = onItemClick.bind(link, el)
+      const icon = document.createElement('i')
+      icon.className = 'fa fa-bell'
+      icon.style.paddingRight = '7px'
+      link.appendChild(icon)
       const me = state.socket.id === el.id
-      const text = document.createTextNode(el.name + (me ? ' [you]' : ''))
-      if (me) { local = true }
+      if (me) {
+        local = true
+        const icon2 = document.createElement('i')
+        icon2.className = 'fa fa-download'
+        icon2.style.paddingRight = '7px'
+        link.appendChild(icon2)
+      }
+      const text = document.createTextNode(el.name)
       link.appendChild(text)
       node.appendChild(link)
       return node
