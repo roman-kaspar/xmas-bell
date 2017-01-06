@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "socket.io based web-app for remotely controlled audio playback",
   "scripts": {
-    "start": "node server.js",
+    "start": "node --harmony-async-await server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engine": {
+    "node": "7.4.0"
   },
   "repository": {
     "type": "git",
