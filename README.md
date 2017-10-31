@@ -17,12 +17,12 @@ You'll see slider to control audio volume (doesn't when audio is hosted on mobil
 
 ## Installation
 
-The server part is written for `node.js`, so you'll need to install `node.js`. To install dependencies use `npm install`, or better `yarn`. To start the server, use `npm start`.
+The server part is written for `node.js`, so you'll need to install `node.js`. To install dependencies use `npm install`. To start the server, use `npm start`.
 
 ```
 $ git clone git@github.com:roman-kaspar/xmas-bell.git
 $ cd xmas-bell
-$ yarn
+$ npm install
 $ npm start
 ```
 

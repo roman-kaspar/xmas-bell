@@ -1,6 +1,6 @@
 {
   "name": "xmas-bell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "socket.io based web-app for remotely controlled audio playback",
   "scripts": {
     "start": "node server.js",
