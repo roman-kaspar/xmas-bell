@@ -1,24 +1,24 @@
+/* eslint-env jquery */
 $(() => {
-
   const views = {
     loading: {
       _view: $('#loading')
     },
     content: {
       _view: $('#content'),
-      list:  $('#session-list'),
-      form:  $('#session-add'),
-      btn:   $('#session-add-button'),
+      list: $('#session-list'),
+      form: $('#session-add'),
+      btn: $('#session-add-button'),
       input: $('#session-add-input')
     },
     detail: {
-      _view:     $('#detail'),
-      name:      $('#session-name'),
-      audioBtn:  $('#audio-ctl'),
+      _view: $('#detail'),
+      name: $('#session-name'),
+      audioBtn: $('#audio-ctl'),
       audioIcon: $('#audio-icon'),
-      termBtn:   $('#session-terminate'),
-      homeBtn:   $('#home'),
-      volume:    $('#volume')
+      termBtn: $('#session-terminate'),
+      homeBtn: $('#home'),
+      volume: $('#volume')
     },
     error: {
       _view: $('#error')
@@ -64,7 +64,7 @@ $(() => {
 
   // SOCKET
 
-  const socket = state.socket = new io()
+  const socket = state.socket = new io() // eslint-disable-line new-cap, no-undef
 
   socket.on('disconnect', () => {
     console.log('web-socket connection down')
@@ -92,8 +92,11 @@ $(() => {
       // existing session removed
       case 'remove':
         state.list = state.list.filter(e => (e.id !== data.id))
-        if (state.view === views.content) { updateList() }
-        else if (state.view === views.detail && state.detailData.id === data.id) { showContent() }
+        if (state.view === views.content) {
+          updateList()
+        } else if (state.view === views.detail && state.detailData.id === data.id) {
+          showContent()
+        }
         break
       // request to start audio playback
       case 'audio-play':
@@ -213,8 +216,11 @@ $(() => {
     views.content.list.empty()
     views.content.list.append(nodes)
     updateAddButton(views.content.input.val())
-    if (!local) { views.content.form.show() }
-    else { views.content.form.hide() }
+    if (!local) {
+      views.content.form.show()
+    } else {
+      views.content.form.hide()
+    }
   }
 
   views.detail.homeBtn.click(showContent)
@@ -228,10 +234,10 @@ $(() => {
     const icon = views.detail.audioIcon
     const btn = views.detail.audioBtn
     if (playing) {
-      if ( icon.hasClass('fa-play')) { icon.removeClass('fa-play'); btn.removeClass('play') }
+      if (icon.hasClass('fa-play')) { icon.removeClass('fa-play'); btn.removeClass('play') }
       if (!icon.hasClass('fa-stop')) { icon.addClass('fa-stop'); btn.addClass('stop') }
     } else {
-      if ( icon.hasClass('fa-stop')) { icon.removeClass('fa-stop'); btn.removeClass('stop') }
+      if (icon.hasClass('fa-stop')) { icon.removeClass('fa-stop'); btn.removeClass('stop') }
       if (!icon.hasClass('fa-play')) { icon.addClass('fa-play'); btn.addClass('play') }
     }
   }
@@ -256,5 +262,4 @@ $(() => {
   const onAudioDone = () => {
     state.socket.emit('data', { type: 'audio-done' })
   }
-
 })

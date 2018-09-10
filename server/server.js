@@ -3,24 +3,26 @@ const express = require('express')
 const app = express()
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
+const path = require('path')
 
 // local imports
 const { log, nlog } = require('./utils')
 
 // env
 const port = process.env.PORT || 3000
+const fileDir = path.resolve(`${__dirname}/../client`)
 
 // middleware
 app.use((req, res, next) => {
-  log(`[http] new request (method:${req.method}, curl:${req.url}, ip:${req.ip})`)
+  log(`[http] new request (method: ${req.method}, url: ${req.url}, ip: ${req.ip})`)
   next()
 })
-app.use('/fonts', express.static(__dirname))
-app.use(express.static(__dirname))
+app.use('/fonts', express.static(fileDir))
+app.use(express.static(fileDir))
 
 // routes
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(fileDir, 'index.html'))
 })
 
 // 404 handler
