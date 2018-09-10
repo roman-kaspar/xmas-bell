@@ -1,3 +1,7 @@
+[![Dependency Status](https://img.shields.io/david/roman-kaspar/xmas-bell.svg)](https://david-dm.org/roman-kaspar/xmas-bell)
+[![devDependency Status](https://img.shields.io/david/dev/roman-kaspar/xmas-bell.svg)](https://david-dm.org/roman-kaspar/xmas-bell?type=dev)
+[![Known Vulnerabilities](https://snyk.io/test/github/roman-kaspar/xmas-bell/badge.svg)](https://snyk.io/test/github/roman-kaspar/xmas-bell)
+
 # xmas-bell
 socket.io based web-app for remotely controlled audio playback
 
