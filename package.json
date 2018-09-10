@@ -45,6 +45,7 @@
   "renovate": {
     "extends": [
       "config:base"
-    ]
+    ],
+    "bumpVersion": "patch"
   }
 }
