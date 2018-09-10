@@ -8,7 +8,7 @@ const leftPad = (str = '', num = 2, pad = '0') => {
 
 const now = () => {
   const t = new Date()
-  return `[${t.getFullYear()}-${leftPad(t.getMonth()+1)}-${leftPad(t.getDate())} ${leftPad(t.getHours())}:${leftPad(t.getMinutes())}:${leftPad(t.getSeconds())}.${leftPad(t.getMilliseconds(),3)}]`
+  return `[${t.getFullYear()}-${leftPad(t.getMonth() + 1)}-${leftPad(t.getDate())} ${leftPad(t.getHours())}:${leftPad(t.getMinutes())}:${leftPad(t.getSeconds())}.${leftPad(t.getMilliseconds(), 3)}]`
 }
 
 const log = (...args) => {
@@ -22,6 +22,6 @@ const nlog = (...args) => {
   console.log.apply(console, args)
 }
 
-const turnLog = (on = true) => logging = on
+const turnLog = (on = true) => { logging = on }
 
 module.exports = { log, nlog, turnLog };
