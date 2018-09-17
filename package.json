@@ -1,6 +1,6 @@
 {
   "name": "xmas-bell",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "socket.io based web-app for remotely controlled audio playback",
   "license": "MIT",
   "author": "Roman Kaspar <roman@salsitasoft.com> (https://salsitasoft.com/)",
@@ -35,7 +35,7 @@
     "socket.io": "2.1.1"
   },
   "devDependencies": {
-    "eslint": "5.5.0",
+    "eslint": "5.6.0",
     "eslint-config-standard": "12.0.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-node": "7.0.1",
