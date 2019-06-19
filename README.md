@@ -5,6 +5,8 @@
 # xmas-bell
 socket.io based web-app for remotely controlled audio playback
 
+### THIS PROJECT IS NO LONGER MAINTAINED.
+
 ## Intro
 
 If you happen to live in the part of the world where children get their Christmas presents in the morning, you are lucky, as Father Christmas (or Santa Claus) has enough time during the night to bring all the presents and put them under the tree.
